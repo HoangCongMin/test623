@@ -10,29 +10,29 @@ import {getImg} from'../../utils/util'
 
 
 
-type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+// type Props = {
+//   params: { id: string };
+//   searchParams: { [key: string]: string | string[] | undefined };
+// };
 
-export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const id = params.id;
+// export async function generateMetadata(
+//   { params, searchParams }: Props,
+//   parent: ResolvingMetadata
+// ): Promise<Metadata> {
+//   const id = params.id;
 
-    const product = await GetAbout(Number(id));
+//     const product = await GetAbout(Number(id));
 
-  const previousImages = (await parent).openGraph?.images || [];
+//   const previousImages = (await parent).openGraph?.images || [];
 
-  return {
-    title:product?.data?.title,
-    description:product?.data?.short_content,
-    openGraph: {
-      images: [getImg(product?.data?.gallery), ...previousImages],
-    },
-  };
-}
+//   return {
+//     title:product?.data?.title,
+//     description:product?.data?.short_content,
+//     openGraph: {
+//       images: [getImg(product?.data?.gallery), ...previousImages],
+//     },
+//   };
+// }
 
 
 const ServiceItemPage = ({params}) => {
