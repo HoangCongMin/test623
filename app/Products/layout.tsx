@@ -25,12 +25,12 @@ export default function RootLayout({
       <head />
 
       <body>
-        <ClientOnly>
+        {/* <ClientOnly> */}
 
         <Header />
         {children}
         <Footer />
-        </ClientOnly>
+        {/* </ClientOnly> */}
       </body>
     </html>
   );
