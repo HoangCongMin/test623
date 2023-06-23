@@ -32,7 +32,7 @@ export default function RootLayout({
 
       <body className="dark:bg-black">
         {/* <QueryClientProvider client={queryClient}> */}
-        <ClientOnly>
+        {/* <ClientOnly> */}
 
           <Providers>
             <Header />
@@ -40,7 +40,7 @@ export default function RootLayout({
             <Footer />
             <ScrollToTop />
           </Providers>
-        </ClientOnly>
+        {/* </ClientOnly> */}
         {/* </QueryClientProvider> */}
       </body>
     </html>
